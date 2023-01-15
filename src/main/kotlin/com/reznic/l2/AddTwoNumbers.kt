@@ -1,14 +1,12 @@
 package com.reznic.l2
 
 import java.math.BigInteger
-
-
 /**
  * 2. Add Two Numbers
  * <br>
  * @see <a href="https://leetcode.com/problems/add-two-numbers/">leetcode.com/problems/add-two-numbers</a>
  */
-class Solution {
+class AddTwoNumbers {
     fun createListNode(values: IntArray): ListNode {
         val root = ListNode(values.first())
         var next: ListNode = root
@@ -44,74 +42,6 @@ class Solution {
 
         return createListNode(resultList.toIntArray())
     }
-}
-
-fun main() {
-    val solution = Solution()
-    val case0 = solution
-        .addTwoNumbers(
-            solution.createListNode(intArrayOf(5, 6, 4)),
-            solution.createListNode(
-                intArrayOf(
-                    1,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    1
-                )
-            )
-        )
-
-    println(case0)
-
-    val case2 = solution
-        .addTwoNumbers(
-            solution.createListNode(intArrayOf(2, 4, 9)),
-            solution.createListNode(intArrayOf(5, 6, 4, 9))
-        )
-    //[7,0,4,0,1]
-    println(case2)
-
-    val case4 = solution
-        .addTwoNumbers(
-            solution.createListNode(intArrayOf(9)),
-            solution.createListNode(intArrayOf(1, 9, 9, 9, 9, 9, 9, 9, 9, 9))
-        )
-    println(case4)
-
-    val case3 = solution
-        .addTwoNumbers(
-            solution.createListNode(intArrayOf(9, 9, 9, 9, 9, 9, 9)),
-            solution.createListNode(intArrayOf(9, 9, 9, 9))
-        )
-
-    println(case3)
 }
 
 data class ListNode(var `val`: Int) {
