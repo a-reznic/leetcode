@@ -1,5 +1,10 @@
 package com.reznic.l1
 
+/**
+ * 1. Two Sum
+ * <br>
+ *  @see <a href="https://leetcode.com/problems/two-sum/">leetcode.com/problems/two-sum/</a>
+ */
 class Solution {
     fun twoSum(nums: IntArray, target: Int): IntArray {
         if (nums.size == 2) {
