@@ -1,9 +1,16 @@
-package net.reznic.leetcode
+package com.reznic.l2
 
+/**
+ * https://leetcode.com/problems/add-two-numbers/
+ * 2. Add Two Numbers - Kotlin
+ */
 fun main() {
-    val addTwoNumbers = Solution().addTwoNumbers(node(2, 4, 3), node(5, 6, 4))
-
-}
+    val addTwoNumbers = Solution()
+        .addTwoNumbers(
+            node(2, 4, 3),
+            node(5, 6, 4)
+        )
+ }
 
 fun node(vararg values: Int): ListNode {
     val root = ListNode(values.first())
@@ -19,10 +26,10 @@ fun node(vararg values: Int): ListNode {
 }
 
 class Solution {
-    fun addTwoNumbers(l1: ListNode?, l2: ListNode?): ListNode? {
+    fun addTwoNumbers(l1: ListNode, l2: ListNode): ListNode {
         var next: ListNode? = l1
         var next2: ListNode? = l2
-        var result: ListNode? = null
+        val result: ListNode = l1
         var decimal = 0
 
         while (next != null && next2 != null && decimal != 1) {
