@@ -10,42 +10,8 @@ fun main() {
     val solution = Solution()
     val case0 = solution
         .addTwoNumbers(
-            solution.createListNode(intArrayOf(5, 6, 4)),
-            solution.createListNode(
-                intArrayOf(
-                    1,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    1
-                )
-            )
+            solution.createListNode(intArrayOf(5,6,4)),
+            solution.createListNode(intArrayOf(1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1))
         )
 
     println(case0)
@@ -60,10 +26,10 @@ fun main() {
 
     val case4 = solution
         .addTwoNumbers(
-            solution.createListNode(intArrayOf(9)),
-            solution.createListNode(intArrayOf(1, 9, 9, 9, 9, 9, 9, 9, 9, 9))
+            solution.createListNode(intArrayOf(  9)),
+            solution.createListNode(intArrayOf(1,9,9,9,9,9,9,9,9,9))
         )
-    println(case4)
+     println(case4)
 
     val case3 = solution
         .addTwoNumbers(
@@ -103,10 +69,10 @@ class Solution {
             next = next?.next
             next2 = next2?.next
         }
-        val firstNumber = BigInteger(l1A.reversed().joinToString(separator = "") { it.toString(10) }, 10)
-        val secondNumber = BigInteger(l2A.reversed().joinToString(separator = "") { it.toString(10) }, 10)
+        val firstNumber = BigInteger(l1A.reversed().joinToString(separator = "") { it.toString(10) },10)
+        val secondNumber = BigInteger(l2A.reversed().joinToString(separator = "") { it.toString(10) },10)
         val sumString = (secondNumber + firstNumber).toString()
-        val resultList = sumString.map {
+        val resultList  = sumString.map {
             it.toString().toInt(10)
         }.reversed()
 
